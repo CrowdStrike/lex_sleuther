@@ -1,0 +1,21 @@
+[project]
+name = "lex_sleuther"
+description = "query, download, and manually classify the lex_sleuther dataset"
+authors = [{ name = "Aaron Eason", email = "aaron.eason@crowdstrike.com" }]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+[build-system]
+requires = ["maturin>=1.4,<2"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+profile = "release"
+locked = true
+strip = true

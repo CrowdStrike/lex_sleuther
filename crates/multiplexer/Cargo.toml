@@ -1,0 +1,19 @@
+[package]
+name = "multiplexer"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+bytesize = "2.0.1"
+utf8-chars = "3.0.1"
+strum.workspace = true
+lexgen_util.workspace = true
+log.workspace = true
+
+# local crates
+html_lexer.workspace = true
+js_lexer.workspace = true
+powershell_lexer.workspace = true
+batch_lexer.workspace = true
+python_lexer.workspace = true
+vb6_lexer.workspace = true

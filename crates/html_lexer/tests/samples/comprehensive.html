@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- This is a comprehensive HTML test file -->
+<html lang="en" data-theme="light">
+<head>
+    <!-- Meta tags with different attributes -->
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+    
+    <title>HTML Lexer Test File</title>
+    
+    <style type="text/css">
+        /* CSS comment */
+        body { 
+            background: #fff;
+            margin: 0;
+        }
+        /* Another comment */
+    </style>
+    
+    <script type="text/javascript">
+        // JavaScript comment
+        var x = 10;
+        /* Multi-line
+           JavaScript comment */
+        function test() {
+            return `Template literal ${x}`;
+        }
+    </script>
+</head>
+<body class="main-body" id=content data-custom="test">
+    <!-- Header section -->
+    <header>
+        <h1>Main Heading</h1>
+        <h2>Sub Heading with special chars: &lt;&gt;&amp;&quot;&apos;</h2>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href=#contact>Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Form elements -->
+        <form action="/submit" method="post">
+            <input type="text" required/>
+            <input type=email placeholder='Enter email'/>
+            <textarea rows=5 cols="40">
+Default text here
+            </textarea>
+            <select>
+                <option value=1>One</option>
+                <option selected="selected">Two</option>
+            </select>
+        </form>
+
+        <!-- Table with various attributes -->
+        <table border=1>
+            <thead>
+                <tr>
+                    <th colspan="2">Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan='2'>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Self-closing tags -->
+        <img src="image.jpg" alt="Test image"/>
+        <br>
+        <hr/>
+
+        <!-- Embedded content -->
+        <iframe src="https://example.com" frameborder="0"></iframe>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Pre-formatted text -->
+        <pre>
+    This text
+        preserves
+            whitespace
+        </pre>
+    </main>
+
+    <footer>
+        <!-- Void elements without closing tags -->
+        <input type="text"><input type="submit">
+        <!-- Mixed quoted attributes -->
+        <p class='test' id="para" data-info=unquoted>Footer text</p>
+    </footer>
+
+    <!--[if IE]>
+    <script src="ie-polyfill.js"></script>
+    <![endif]-->
+</body>
+</html>
