@@ -1,3 +1,5 @@
+![CrowdStrike Falcon](https://raw.githubusercontent.com/CrowdStrike/falconpy/main/docs/asset/cs-logo.png) [![Twitter URL](https://img.shields.io/twitter/url?label=Follow%20%40CrowdStrike&style=social&url=https%3A%2F%2Ftwitter.com%2FCrowdStrike)](https://twitter.com/CrowdStrike)<br/>
+
 # lex_sleuther
 
 This program can read and understand the source code of many script languages and will tell you which language a text file is most likely to contain. **Lex Sleuther is a novel experiment**. It is provided for the potential benefit of the community but its applications are limited by design. For more information about its origins, how it works, and what problems it solves, please see the [2025 BSidesSF talk about it here](#TODO).
@@ -88,6 +90,12 @@ and there are multiple potential improvements that remain unexplored:
 #### note on differences from Magika
 
 The original version of `Magika` struggled with "nested" formats, ie scripts that contain other programming languages. For example, an HTML file often contains large sections of JavaScript, CSS, SVG, JSON, and others. This was a contributing factor to `Magika`'s high false negative rate with such files, and was one area where Lex Sleuther outperformed Magika outright. Because Lex Sleuther lexes files according to the rules of that language, it does not suffer from this problem, and usually ignores everything that isn't the outer-most language. That said, since the v3 of `Magika`'s model, this limitation has been seemingly addressed. 
+
+## support
+
+`lex_sleuther` is an open source project, not a CrowdStrike product. As such, it carries no formal support, expressed or implied.
+
+If you encounter any issues while using `lex_sleuther`, you can create an issue on our Github repo for bugs, enhancements, or other requests.
 
 ## disclaimer
 
