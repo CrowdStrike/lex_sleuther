@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: 'lex_sleuther: Sleuth out script languages by lexing.'
+message: >-
+  If you use this software, and wish to cite the origins, 
+  please use metadata from this file.
+type: software
+authors:
+  - given-names: 
+    family-names: CrowdStrike
+  - given-names: Aaron James
+    family-names: Eason
+    affiliation: CrowdStrike
+date-released: 2025-04-17
+repository-code: 'https://github.com/CrowdStrike/lex_sleuther'
+url: https://github.com/CrowdStrike/lex_sleuther'
+# repository-artifact: 'https://pypi.org/project/lex_sleuther/'
+abstract: >-
+  Lex Sleuther can read and understand the source code
+  of many script languages and will tell you which language
+  a text file is most likely to contain.
+keywords:
+  - crowdstrike
+  - script-detection
+  - lexing
+  - malware
+  - rust
+  - python
+  - windows
+  - linux
+  - mac
+license: MIT
