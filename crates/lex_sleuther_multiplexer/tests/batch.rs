@@ -1,4 +1,4 @@
-use batch_lexer::{BatchLexer, BatchTokenKind};
+use lex_sleuther_multiplexer::{BatchLexer, BatchTokenKind};
 
 const SYNTAX_TEST: &str = include_str!("./samples/syntax_test.bat");
 

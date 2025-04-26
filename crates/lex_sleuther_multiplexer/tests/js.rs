@@ -1,4 +1,4 @@
-use js_lexer::JsLexer;
+use lex_sleuther_multiplexer::JsLexer;
 
 const COMPREHENSIVE: &str = include_str!("./samples/comprehensive.js");
 

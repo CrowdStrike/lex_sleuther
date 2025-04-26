@@ -1,4 +1,4 @@
-use powershell_lexer::PowerShellLexer;
+use lex_sleuther_multiplexer::PowerShellLexer;
 
 const COMPREHENSIVE: &str = include_str!("./samples/comprehensive.ps1");
 

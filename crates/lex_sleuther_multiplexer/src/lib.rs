@@ -7,20 +7,26 @@ use std::{
 
 use log::trace;
 
-use batch_lexer::{BatchLexer, BatchTokenKind};
-use html_lexer::{HtmlLexer, HtmlTokenKind};
-use js_lexer::{JsLexer, JsTokenKind};
+pub use batch_lexer::{BatchLexer, BatchTokenKind};
+pub use html_lexer::{HtmlLexer, HtmlTokenKind};
+pub use js_lexer::{JsLexer, JsTokenKind};
 use lexer::LexerResultAccumulator;
-use powershell_lexer::{PowerShellLexer, PowerShellTokenKind};
-use python_lexer::{PythonLexer, PythonTokenKind};
+pub use powershell_lexer::{PowerShellLexer, PowerShellTokenKind};
+pub use python_lexer::{PythonLexer, PythonTokenKind};
 use strum::EnumCount;
-use vb6_lexer::{Vb6Lexer, Vb6TokenKind};
+pub use vb6_lexer::{Vb6Lexer, Vb6TokenKind};
 
 // reexport for ergonomics
 pub use lexer::LexerResult;
 
+mod batch_lexer;
+mod html_lexer;
+mod js_lexer;
 mod lexer;
+mod powershell_lexer;
+mod python_lexer;
 mod scanner;
+mod vb6_lexer;
 
 /// Given an Iterator over Unicode `char`'s, computes the feature vector derived from our hoard of lexers.
 /// This is the meat and potatoes of this library.

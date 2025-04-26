@@ -104,15 +104,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 
 [[package]]
-name = "batch_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
-]
-
-[[package]]
 name = "bitflags"
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -326,15 +317,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
-name = "html_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
-]
-
-[[package]]
 name = "iana-time-zone"
 version = "0.1.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -405,15 +387,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "js_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
-]
-
-[[package]]
 name = "katexit"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -455,12 +428,24 @@ dependencies = [
  "clap",
  "clap-verbosity-flag",
  "env_logger",
+ "lex_sleuther_multiplexer",
  "log",
- "multiplexer",
  "ndarray",
  "ndarray-linalg",
  "rand 0.9.0",
  "rayon",
+]
+
+[[package]]
+name = "lex_sleuther_multiplexer"
+version = "1.0.0"
+dependencies = [
+ "bytesize",
+ "lexgen",
+ "lexgen_util",
+ "log",
+ "strum",
+ "utf8-chars",
 ]
 
 [[package]]
@@ -527,23 +512,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a"
 dependencies = [
  "autocfg",
-]
-
-[[package]]
-name = "multiplexer"
-version = "0.0.0"
-dependencies = [
- "batch_lexer",
- "bytesize",
- "html_lexer",
- "js_lexer",
- "lexgen_util",
- "log",
- "powershell_lexer",
- "python_lexer",
- "strum",
- "utf8-chars",
- "vb6_lexer",
 ]
 
 [[package]]
@@ -631,15 +599,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "powershell_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
-]
-
-[[package]]
 name = "ppv-lite86"
 version = "0.2.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -718,15 +677,6 @@ dependencies = [
  "pyo3-build-config",
  "quote",
  "syn 2.0.100",
-]
-
-[[package]]
-name = "python_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
 ]
 
 [[package]]
@@ -1005,15 +955,6 @@ name = "utf8parse"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
-
-[[package]]
-name = "vb6_lexer"
-version = "0.0.0"
-dependencies = [
- "lexgen",
- "lexgen_util",
- "strum",
-]
 
 [[package]]
 name = "wasi"

@@ -1,4 +1,4 @@
-use vb6_lexer::Vb6Lexer;
+use lex_sleuther_multiplexer::Vb6Lexer;
 
 const COMPREHENSIVE: &str = include_str!("./samples/comprehensive.vb");
 

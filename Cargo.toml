@@ -5,22 +5,16 @@ members = ["crates/*"]
 edition = "2024"
 rust-version = "1.85"
 license = "MIT"
+homepage = "https://github.com/CrowdStrike/lex_sleuther"
+repository = "https://github.com/CrowdStrike/lex_sleuther"
 
 [workspace.dependencies]
-lexgen = "0.16.0"
-lexgen_util = "0.16.0"
 log = { version = "0.4.27", features = ["release_max_level_debug"] }
-strum = { version = "0.27.1", features = ["derive"] }
 # local crates
-html_lexer.path = "crates/html_lexer"
-powershell_lexer.path = "crates/powershell_lexer"
-js_lexer.path = "crates/js_lexer"
-batch_lexer.path = "crates/batch_lexer"
-python_lexer.path = "crates/python_lexer"
-vb6_lexer.path = "crates/vb6_lexer"
-multiplexer.path = "crates/multiplexer"
-lex_sleuther = { path = ".", default-features = false, features = ["baked_model"] }
-
+lex_sleuther_multiplexer = { path = "crates/lex_sleuther_multiplexer", version = "1.0.0" }
+lex_sleuther = { path = ".", default-features = false, features = [
+    "baked_model",
+] }
 
 
 [package]
@@ -30,14 +24,15 @@ version = "0.1.0"
 edition.workspace = true
 rust-version.workspace = true
 license.workspace = true
-homepage = "https://github.com/CrowdStrike/lex_sleuther"
-repository = "https://github.com/CrowdStrike/lex_sleuther"
+homepage.workspace = true
+repository.workspace = true
+readme = "README.md"
 
 [dependencies]
 log = { version = "0.4.20", features = ["release_max_level_debug"] }
 ndarray = "0.16.1"
 rayon = "1.8.1"
-multiplexer.workspace = true
+lex_sleuther_multiplexer.workspace = true
 # cli-only features
 ndarray-linalg = { version = "0.17.0", optional = true }
 env_logger = { version = "0.11.8", optional = true }
@@ -51,17 +46,8 @@ clap-verbosity-flag = "3.0.2"
 # this line exists to make `cargo run` more ergonomic and not require `--features`
 default = ["cli"]
 baked_model = []
-cli = [
-    "baked_model",
-    "env_logger",
-    "clap",
-    "chrono",
-    "anyhow",
-]
-train = [
-    "ndarray-linalg",
-    "rand",
-]
+cli = ["baked_model", "env_logger", "clap", "chrono", "anyhow"]
+train = ["ndarray-linalg", "rand"]
 
 [[bin]]
 name = "lex_sleuther"

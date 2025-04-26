@@ -1,4 +1,4 @@
-# multiplexer
+# lex_sleuther_multiplexer
 
 A **multiplexer** over multiple lexers. 
 
@@ -10,8 +10,8 @@ We leverage the [`lexgen`](https://github.com/osa1/lexgen) lexer library to buil
 
 There are three general steps to adding new lexers:
 
-1. Create a new crate using the `lexgen::lexer!` macro to generate a lexer based on a PEG-like syntax. Use existing lexers as a guide.
-2. Add your lexer to the array `lexers` in `multiplexer/src/lib.rs`. 
+1. Create a new module using the `lexgen::lexer!` macro to generate a lexer based on a PEG-like syntax. Use existing lexers as a guide.
+2. Add your lexer to the array `lexers` in `src/lib.rs`. 
 3. Create a simple test to sanity check the stability of your lexer. Use existing tests as an example.
 
 Note that adding a lexer here does *not* add a new classification set to [`lex_sleuther`](../../README.md) upstream.

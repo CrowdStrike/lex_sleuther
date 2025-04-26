@@ -1,4 +1,4 @@
-use python_lexer::PythonLexer;
+use lex_sleuther_multiplexer::PythonLexer;
 
 const COMPREHENSIVE: &str = include_str!("./samples/comprehensive.py");
 

@@ -1,0 +1,17 @@
+[package]
+name = "lex_sleuther_multiplexer"
+version = "1.0.0"
+description = "a multiplexer over multiple lexers"
+license = "MIT"
+edition.workspace = true
+rust-version.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+bytesize = "2.0.1"
+utf8-chars = "3.0.1"
+lexgen = "0.16.0"
+lexgen_util = "0.16.0"
+log.workspace = true
+strum = { version = "0.27.1", features = ["derive"] }

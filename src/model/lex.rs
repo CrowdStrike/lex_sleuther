@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use multiplexer::{lexer_results_from_bytes, lexer_results_from_file, LexerResult};
+use lex_sleuther_multiplexer::{lexer_results_from_bytes, lexer_results_from_file, LexerResult};
 use ndarray::Array2;
 use rayon::prelude::*;
 

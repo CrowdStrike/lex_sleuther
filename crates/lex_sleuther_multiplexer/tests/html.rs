@@ -1,4 +1,4 @@
-use html_lexer::HtmlLexer;
+use lex_sleuther_multiplexer::HtmlLexer;
 
 const COMPREHENSIVE: &str = include_str!("./samples/comprehensive.html");
 

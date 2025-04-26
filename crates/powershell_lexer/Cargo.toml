@@ -1,9 +1,0 @@
-[package]
-name = "powershell_lexer"
-edition.workspace = true
-rust-version.workspace = true
-
-[dependencies]
-lexgen.workspace = true
-lexgen_util.workspace = true
-strum.workspace = true
